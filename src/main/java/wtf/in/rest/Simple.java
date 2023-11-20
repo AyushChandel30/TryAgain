@@ -1,5 +1,6 @@
 package wtf.in.rest;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,12 @@ public class Simple {
 	public ResponseEntity<Optional<Animal>> get (@PathVariable("i1") Integer i1){
 		Optional<Animal> animal = as.getAnimal(i1);
 		return new ResponseEntity<Optional<Animal>> (animal, HttpStatus.OK);
+	}
+	
+	@GetMapping(value="getingAll")
+	public ResponseEntity<List<Animal>> getAll (){
+		List<Animal> list = as.getAllAnimal();
+		return new ResponseEntity<List<Animal>> (list, HttpStatus.OK);
 	}
 
 	@DeleteMapping(value="/delete/{i2}")

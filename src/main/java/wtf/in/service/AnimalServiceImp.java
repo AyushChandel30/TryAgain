@@ -1,5 +1,6 @@
 package wtf.in.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,12 @@ public class AnimalServiceImp implements AnimalService {
 	public String removeAnimal(Integer i2) {
 		ar.deleteById(i2);
 		return "Record deleted";
+	}
+
+	@Override
+	public List<Animal> getAllAnimal() {
+		List<Animal> list = ar.findAll();
+		return list;
 	}
 	
 	
