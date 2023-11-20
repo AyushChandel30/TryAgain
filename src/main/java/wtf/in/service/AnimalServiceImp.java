@@ -25,13 +25,13 @@ public class AnimalServiceImp implements AnimalService {
 	}
 
 	@Override
-	public Optional<Animal> getPlayer(Integer i1) {
+	public Optional<Animal> getAnimal(Integer i1) {
 		Optional<Animal> findById = ar.findById(i1);
 		return findById;
 	}
 
 	@Override
-	public String removePlayer(Integer i2) {
+	public String removeAnimal(Integer i2) {
 		ar.deleteById(i2);
 		return "Record deleted";
 	}

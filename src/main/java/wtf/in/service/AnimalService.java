@@ -8,7 +8,7 @@ import wtf.in.entity.Animal;
 public interface AnimalService {
 	
 	public String upsert (Animal p);
-	public Optional<Animal> getPlayer (Integer i1);
-	public String removePlayer (Integer i2);
+	public Optional<Animal> getAnimal (Integer i1);
+	public String removeAnimal (Integer i2);
 
 }
